@@ -1,0 +1,38 @@
+{
+  "name": "@ukiyo/mcp",
+  "version": "0.2.0",
+  "description": "Ukiyo MCP server: let AI agents rent and use GPUs.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ukiyo-mcp": "dist/main.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ukiyocompute/ukiyo-mcp.git"
+  },
+  "homepage": "https://docs.u-kiyo.ai/connect/mcp",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "release": "node scripts/build-release.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "esbuild": "0.28.1",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "fast-uri": "3.1.5"
+  }
+}
